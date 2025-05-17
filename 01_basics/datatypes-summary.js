@@ -28,7 +28,26 @@ const myFunc = function() {
     console.log("Hello world!");
 }
 
-console.log(typeof heroes)
-console.log(typeof myObj)
-console.log(typeof myFunc)
-console.log(typeof id)
+// console.log(typeof heroes)
+// console.log(typeof myObj)
+// console.log(typeof myFunc)
+// console.log(typeof id)
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let youtubename = "hiteshchoudharydotcom"
+let anothername = youtubename
+anothername = "chaiaurcode"
+// console.log(youtubename)
+// console.log(anothername)
+
+let user1 = {
+    email: "google.com",
+    upi: "user@ybl"
+}
+let user2 = user1
+user2.email = "yahoo.com"
+console.log(user1)
+console.log(user2)
