@@ -14,13 +14,16 @@
     const sayDate = str => {
         console.log(`${str} at ${Date.now().toLocaleString()}`)
     }
-    const firstInterval = setInterval(sayDate, 1000, "Hemant")
+    let intervalId = setInterval(sayDate, 1000, "Hemant")
 
     document.querySelector("#stop").addEventListener("click", () => {
-        clearInterval(firstInterval)
+        clearInterval(intervalId)
+        intervalId = null
     })
     document.querySelector("#start").addEventListener("click", () => {
-        setInterval(sayDate, 1000, "Hemant")
+        if(intervalId == null) {
+            intervalId = setInterval(sayDate, 1000, "Hemant")
+        } 
     })
 
 
